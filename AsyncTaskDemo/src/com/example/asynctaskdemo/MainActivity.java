@@ -29,30 +29,8 @@ public class MainActivity extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		
-		
-		findViewById(R.id.bt_hello_world).setOnClickListener(new OnClickListener() {
-			
-			@SuppressLint("NewApi")
-			@Override
-			public void onClick(View arg0) {
-				try {
-					new DownloadFilesTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,new URL("file://nihao"));
-					new DownloadFilesTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,new URL("file://nihao"));
-					new DownloadFilesTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,new URL("file://nihao"));
-					new DownloadFilesTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,new URL("file://nihao"));
-					new DownloadFilesTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,new URL("file://nihao"));
-					new DownloadFilesTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,new URL("file://nihao"));
-					new DownloadFilesTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,new URL("file://nihao"));
-				} catch (MalformedURLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-		});
-		
 		setContentView(R.layout.pic_layout);
+		
 		mImageGridView = (GridView) findViewById(R.id.gridView1);
 		mImageAdapter = new ImageAdapter(this);
 		mImageGridView.setAdapter(mImageAdapter);
@@ -75,6 +53,32 @@ public class MainActivity extends ActionBarActivity {
 				
 			}
 		});
+		
+	setContentView(R.layout.activity_main);
+		
+		
+		findViewById(R.id.bt_hello_world).setOnClickListener(new OnClickListener() {
+			
+			@SuppressLint("NewApi")
+			@Override
+			public void onClick(View arg0) {
+//				try {
+//					new DownloadFilesTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,new URL("file://nihao"));
+//					new DownloadFilesTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,new URL("file://nihao"));
+//					new DownloadFilesTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,new URL("file://nihao"));
+//					new DownloadFilesTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,new URL("file://nihao"));
+//					new DownloadFilesTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,new URL("file://nihao"));
+//					new DownloadFilesTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,new URL("file://nihao"));
+//					new DownloadFilesTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,new URL("file://nihao"));
+//				} catch (MalformedURLException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+				
+				throw new RuntimeException("自定义异常： 这是自己跑出的异常");
+			}
+		});
+		
 		
 		
 		
