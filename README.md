@@ -1,0 +1,3 @@
+# ThreadPoolAndImageLoader
+
+Android开发艺术探索 十一十二章内容，内容包括四中经典的线程池语法，以及自己实现的ImageLoader(对LruCache,DiskLruCache，Bitmap等的使用)
